@@ -1,23 +1,23 @@
 <div class="text-center">
-  <h1>Income</h1>
+  <h1>Edit Income</h1>
 </div>
 
 @model Income
 
-<form asp-action="Create" asp-controller="Income" method="post">
+<form asp-action="Update" asp-controller="Income" method="post">
   <div class="income-container">
     <div>
       <!--*--------NAME---------->
       <section class="name">
         <label asp-for="IncomeName">Name:</label>
-        <input asp-for="IncomeName" type="text" />
+        <input asp-for="IncomeName" type="text" value="@Model.IncomeName" />
         <span asp-validation-for="IncomeName"></span>
       </section>
 
       <!--*--------AMOUNT---------->
       <section class="amount">
         <label asp-for="Amount">Amount</label>
-        <input asp-for="Amount" type="text" />
+        <input asp-for="Amount" type="text" value="@Model.Amount" />
         <span asp-validation-for="Amount"></span>
       </section>
 
@@ -25,7 +25,7 @@
       <div>
         <section class="category">
           <label asp-for="Category">Category</label>
-          <select asp-for="Category">
+          <select asp-for="Category" value="@Model.Category">
             <option value="">Choose</option>
             <option value="Work">Work</option>
             <option value="Business">Business</option>
@@ -41,7 +41,7 @@
     <!--*----------DATE------------>
     <section class="date">
       <label asp-for="date_time"># of Date</label>
-      <input asp-for="date_time" type="date" />
+      <input asp-for="date_time" type="date" value="@Model.date_time" />
       <span asp-validation-for="date_time"></span>
     </section>
 
@@ -49,7 +49,7 @@
     <div>
       <section class="text-box">
         <label asp-for="Description"></label>
-        <textarea asp-for="Description" cols="55" rows="7"></textarea>
+        <textarea asp-for="Description" cols="55" rows="7" value="@Model.Description"></textarea>
         <span asp-validation-for="Description"></span>
       </section>
 
@@ -58,8 +58,3 @@
     </div>
   </div>
 </form>
-
-<div class="total">
-  <h3>Total Income</h3>
-  <p>$</p>
-</div>

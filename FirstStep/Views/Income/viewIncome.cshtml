@@ -1,29 +1,35 @@
-<h1>Income</h1>
+@model Income
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Category</th>
-      <th scope="col">Description</th>
-      <th scope="col">Amount</th>
-      <th scope="col">Date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Bonus</th>
-      <td>Bonus</td>
-      <td>I was given a christmas bonus this year! </td>
-      <td>$200</td>
-      <td>12/22/2022</td>
-    </tr>
-    <tr>
-      <th scope="row">Name</th>
-      <td>Category</td>
-      <td>Description</td>
-      <td>Amount</td>
-      <td>Date</td>
-    </tr>
-  </tbody>
-</table>
+<div class="ind-inc">
+  <!--*--------NAME---------->
+  <h1>@Model.IncomeName</h1>
+  <div class="cad">
+    <!--*--------CATEGORY---------->
+    <div class="cat">
+      <h3>Category</h3>
+      <p>@Model.Category</p>
+    </div>
+    <!--*--------AMOUNT---------->
+    <div class="amt">
+      <h3>Amount</h3>
+      <p>$@Model.Amount</p>
+    </div>
+    <!--*----------DATE---------->
+    <div class="date">
+      <h3>Date</h3>
+      <p>@Model.date_time</p>
+    </div>
+  </div>
+  <div class="deb">
+    <!--*----------DESCRIPTION---------->
+    <div class="des">
+      <h3>Description</h3>
+      <p>@Model.Description</p>
+    </div>
+    <!--*--------BUTTONS---------->
+    <div class="buttons">
+      <a class="delete" href="/incomes/@Model.IncomeId/delete">Delete</a>
+      <a class="edit" href="/incomes/@Model.IncomeId/edit">Edit</a>
+    </div>
+  </div>
+</div>

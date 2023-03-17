@@ -7,19 +7,28 @@ namespace FirstStep.Controllers;
 public class HomeController : Controller
 {
   private readonly ILogger<HomeController> _logger;
-  private MyContext db;
+  private MyContext _context;
 
   public HomeController(ILogger<HomeController> logger, MyContext context)
   {
     _logger = logger;
-    db = context;
+    _context = context;
   }
 
-  // public IActionResult Index()
-  // {
-  //   return View();
-  // }
-
+  public IActionResult Index()
+  {
+    return View();
+  }
+  public IActionResult ListIncome()
+  {
+    List<Income> allIncomes = _context.Incomes.ToList();
+    return View("ListIncome", allIncomes);
+  }
+  public IActionResult AllExpenses()
+  {
+    List<Expense> allExpenses = _context.Expenses.ToList();
+    return View("ListExpenses", allExpenses);
+  }
 
 
   [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
