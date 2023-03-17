@@ -1,0 +1,67 @@
+<div class="text-center">
+  <h1>Income</h1>
+</div>
+
+@model Income
+
+<!--TODO ------------REMEMBER TO ADD THE SPAN VALIDATIONS BACK IN-------------->
+
+<form asp-action="Create" asp-controller="Income" method="post">
+  <div class="income-container">
+    <div>
+      <!--*--------NAME---------->
+      <section class="name">
+        <label asp-for="IncomeName">Name:</label>
+        <input asp-for="IncomeName" type="text" />
+        <span asp-validation-for="IncomeName"></span>
+      </section>
+
+      <!--*--------AMOUNT---------->
+      <section class="amount">
+        <label asp-for="Amount">Amount</label>
+        <input asp-for="Amount" type="text" />
+        <span asp-validation-for="Amount"></span>
+      </section>
+
+      <!--*--------CATEGORY---------->
+      <div>
+        <section class="category">
+          <label asp-for="Category">Category</label>
+          <select asp-for="Category">
+            <option value="">Choose</option>
+            <option value="Work">Work</option>
+            <option value="Business">Business</option>
+            <option value="Tips">Tips</option>
+            <option value="Bonus">Bonus</option>
+            <option value="Other">Other</option>
+          </select>
+          <span asp-validation-for="Category"></span>
+        </section>
+      </div>
+    </div>
+
+    <!--*----------DATE------------>
+    <section class="date">
+      <label asp-for="date_time"># of Date</label>
+      <input asp-for="date_time" type="date" />
+      <span asp-validation-for="date_time"></span>
+    </section>
+
+    <!--*----------DESCRIPTION------------>
+    <div>
+      <section class="text-box">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" cols="55" rows="7"></textarea>
+        <span asp-validation-for="Description"></span>
+      </section>
+
+      <!--* BUTTONS -->
+      <button>Submit</button>
+    </div>
+  </div>
+</form>
+
+<div class="total">
+  <h3>Total Income</h3>
+  <p>$</p>
+</div>

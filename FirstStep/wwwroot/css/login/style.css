@@ -1,0 +1,38 @@
+html,
+body,
+main {
+  height: 100%;
+  margin: 0;
+}
+html .reg-container,
+body .reg-container,
+main .reg-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+html .reg-container .registration-form,
+body .reg-container .registration-form,
+main .reg-container .registration-form {
+  width: 50%;
+}
+html .reg-container .registration-form .container,
+body .reg-container .registration-form .container,
+main .reg-container .registration-form .container {
+  display: flex;
+  flex-direction: column;
+}
+html .reg-container .hello-container,
+body .reg-container .hello-container,
+main .reg-container .hello-container {
+  background-color: #20cd8d;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 50%;
+}
