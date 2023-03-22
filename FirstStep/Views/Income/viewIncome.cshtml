@@ -1,35 +1,44 @@
+@await Html.PartialAsync("_Navbar")
+
+<head>
+  <link rel="stylesheet" href="~/css/layout/nav.css">
+  <link rel="stylesheet" href="~/css/layout/view.css">
+</head>
+
 @model Income
 
 <div class="ind-inc">
   <!--*--------NAME---------->
   <h1>@Model.IncomeName</h1>
-  <div class="cad">
-    <!--*--------CATEGORY---------->
-    <div class="cat">
-      <h3>Category</h3>
-      <p>@Model.Category</p>
+  <div class="body">
+    <div class="cad">
+      <!--*--------CATEGORY---------->
+      <div class="cat">
+        <h3>Category:</h3>
+        <p>@Model.Category</p>
+      </div>
+      <!--*--------AMOUNT---------->
+      <div class="amt">
+        <h3>Amount:</h3>
+        <p>$@Model.Amount</p>
+      </div>
+      <!--*----------DATE---------->
+      <div class="date">
+        <h3>Date:</h3>
+        <p>@Model.date_time</p>
+      </div>
     </div>
-    <!--*--------AMOUNT---------->
-    <div class="amt">
-      <h3>Amount</h3>
-      <p>$@Model.Amount</p>
-    </div>
-    <!--*----------DATE---------->
-    <div class="date">
-      <h3>Date</h3>
-      <p>@Model.date_time</p>
-    </div>
-  </div>
-  <div class="deb">
-    <!--*----------DESCRIPTION---------->
-    <div class="des">
-      <h3>Description</h3>
-      <p>@Model.Description</p>
-    </div>
-    <!--*--------BUTTONS---------->
-    <div class="buttons">
-      <a class="delete" href="/incomes/@Model.IncomeId/delete">Delete</a>
-      <a class="edit" href="/incomes/@Model.IncomeId/edit">Edit</a>
+    <div class="deb">
+      <!--*----------DESCRIPTION---------->
+      <div class="des">
+        <h3>Description:</h3>
+        <p>@Model.Description</p>
+      </div>
+      <!--*--------BUTTONS---------->
+      <div class="buttons">
+        <a class="edit" href="/incomes/@Model.IncomeId/edit">Edit</a>
+        <a class="delete" href="/income/@Model.IncomeId/delete">Delete</a>
+      </div>
     </div>
   </div>
 </div>

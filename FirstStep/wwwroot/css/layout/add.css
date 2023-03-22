@@ -1,0 +1,118 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .edit,
+main .add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .edit form,
+main .add form {
+  width: 100%;
+}
+main .edit form .income-container,
+main .add form .income-container,
+main .edit form .expense-container,
+main .add form .expense-container {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.75em;
+}
+main .edit form .income-container .nam-cat,
+main .add form .income-container .nam-cat,
+main .edit form .expense-container .nam-cat,
+main .add form .expense-container .nam-cat {
+  width: 25%;
+}
+main .edit form .income-container .nam-cat .total,
+main .add form .income-container .nam-cat .total,
+main .edit form .expense-container .nam-cat .total,
+main .add form .expense-container .nam-cat .total {
+  text-align: center;
+  margin-top: 1em;
+  background-color: #ff8c2f;
+  border-radius: 0.5em;
+}
+main .edit form .income-container .nam-cat .category select,
+main .add form .income-container .nam-cat .category select,
+main .edit form .expense-container .nam-cat .category select,
+main .add form .expense-container .nam-cat .category select {
+  margin-top: 0.25em;
+}
+main .edit form .income-container .desc .text-box,
+main .add form .income-container .desc .text-box,
+main .edit form .expense-container .desc .text-box,
+main .add form .expense-container .desc .text-box {
+  display: flex;
+  flex-direction: column;
+}
+main .edit form .income-container .amt-date,
+main .add form .income-container .amt-date,
+main .edit form .expense-container .amt-date,
+main .add form .expense-container .amt-date {
+  width: 25%;
+}
+main .edit form .income-container .amt-date .date,
+main .add form .income-container .amt-date .date,
+main .edit form .expense-container .amt-date .date,
+main .add form .expense-container .amt-date .date {
+  display: flex;
+  flex-direction: column;
+}
+main .edit form .income-container .amt-date .date input,
+main .add form .income-container .amt-date .date input,
+main .edit form .expense-container .amt-date .date input,
+main .add form .expense-container .amt-date .date input {
+  margin-top: 0.25em;
+}
+main .edit form .income-container .amt-date button,
+main .add form .income-container .amt-date button,
+main .edit form .expense-container .amt-date button,
+main .add form .expense-container .amt-date button {
+  margin-top: 1.75em;
+  margin-left: 3.5em;
+  width: fit-content;
+  background-color: #ffb477;
+  color: white;
+  border: none;
+  border-radius: 0.25em;
+}
+main .edit form .income-container .amt-date button:hover,
+main .add form .income-container .amt-date button:hover,
+main .edit form .expense-container .amt-date button:hover,
+main .add form .expense-container .amt-date button:hover {
+  background-color: #ff8c2f;
+}
+main .edit form .income-container .amt-date #update-button,
+main .add form .income-container .amt-date #update-button,
+main .edit form .expense-container .amt-date #update-button,
+main .add form .expense-container .amt-date #update-button {
+  width: fit-content;
+}
+main .edit form .income-container div section,
+main .add form .income-container div section,
+main .edit form .expense-container div section,
+main .add form .expense-container div section {
+  display: flex;
+  flex-direction: column;
+}
+main .edit form .income-container div section label,
+main .add form .income-container div section label,
+main .edit form .expense-container div section label,
+main .add form .expense-container div section label {
+  margin-top: 1em;
+}
+main .edit form .income-container div section input,
+main .add form .income-container div section input,
+main .edit form .expense-container div section input,
+main .add form .expense-container div section input {
+  line-height: 1em;
+}
+main .edit form .income-container div section span,
+main .add form .income-container div section span,
+main .edit form .expense-container div section span,
+main .add form .expense-container div section span {
+  font-size: 0.65em;
+}

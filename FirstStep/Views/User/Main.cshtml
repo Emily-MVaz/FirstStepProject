@@ -1,49 +1,51 @@
 <head>
+  <link rel="stylesheet" href="~/dash/layout.css">
 </head>
 
 @await Html.PartialAsync("Sidebar")
 
+
+@model Income
 <!--Main layout-->
-<div class="dash-header">
-  <h1>
-    Home
-  </h1>
-  <h1>
-    Welcome Name!
-  </h1>
-</div>
+<div class="dashboard">
+  <div class="dash-header">
+    <h1>
+      Home
+    </h1>
+  </div>
 
-<div class="totals">
-  <div class="total-in bg-info">
-    <h2>Total Income:</h2>
-    <h4>Transactions:</h4>
+  <div class="totals">
+    <div class="total-in bg-info">
+      <h2>Total Income:</h2>
+      <h4>Transactions:z</h4>
+    </div>
+    <div class="total-ex bg-info">
+      <h2>Total Expenses:</h2>
+      <h4>Transactions:</h4>
+    </div>
   </div>
-  <div class="total-ex bg-info">
-    <h2>Total Expenses:</h2>
-    <h4>Transactions:</h4>
-  </div>
-</div>
 
-<div class="numbers">
-  <div class="small-cards">
-    <div class="max-min">
-      <h4>Max Income</h4>
-      <h4>Min Income</h4>
+  <div class="numbers">
+    <div class="small-cards">
+      <div class="max-min">
+        <h4>Max Income</h4>
+        <h4>Min Income</h4>
+      </div>
+      <div class="max-min">
+        <h4>Max Expenses</h4>
+        <h4>Min Expenses</h4>
+      </div>
+      <div class="last">
+        <h4>Last Income</h4>
+        <h4>Last Expense</h4>
+      </div>
+      <div class="best">
+        <h4>Best Income Category</h4>
+        <h4>Best Expense Category</h4>
+      </div>
     </div>
-    <div class="max-min">
-      <h4>Max Expenses</h4>
-      <h4>Min Expenses</h4>
+    <div class="current">
+      <h2>Current Balance:</h2>
     </div>
-    <div class="last">
-      <h4>Last Income</h4>
-      <h4>Last Expense</h4>
-    </div>
-    <div class="best">
-      <h4>Best Income Category</h4>
-      <h4>Best Expense Category</h4>
-    </div>
-  </div>
-  <div class="current">
-    <h2>Current Balance:</h2>
   </div>
 </div>

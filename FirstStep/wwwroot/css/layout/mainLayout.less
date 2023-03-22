@@ -1,0 +1,32 @@
+main {
+  display: flex;
+  height: 100%;
+
+  .sidebar {
+    width: 15%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#2fe09f, #07a5cc);
+    .nav {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: space-evenly;
+      // flex-direction: column;
+      .nav-item {
+        font-size: 1.5em;
+        padding-top: 2em;
+        width: fit-content;
+        text-align: center;
+
+        img {
+          width: 25%;
+        }
+      }
+    }
+  }
+  .dashboard {
+    width: 85%;
+  }
+}

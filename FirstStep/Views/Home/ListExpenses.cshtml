@@ -1,9 +1,13 @@
-@model List<Expense>
+@await Html.PartialAsync("_Navbar")
 
+<head>
+  <link rel="stylesheet" href="~/css/layout/nav.css">
+</head>
+
+@model List<Expense>
   <h1>Expenses</h1>
 
-
-  <table class="table table-bordered">
+  <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
         <th scope="col">Name</th>
@@ -16,19 +20,16 @@
     <tbody>
       @foreach (var expense in Model) {
       <tr>
-        <th scope="row">@expense.ExpenseName</th>
+        <th scope="row">
+          <a href="~/expenses/@expense.ExpenseId">
+            @expense.ExpenseName
+          </a>
+        </th>
         <td>@expense.Category</td>
         <td>@expense.Description</td>
         <td>@expense.Amount</td>
         <td>@expense.date_time</td>
       </tr>
       }
-      <tr>
-        <th scope="row">Name</th>
-        <td>Category</td>
-        <td>Description</td>
-        <td>Amount</td>
-        <td>Date</td>
-      </tr>
     </tbody>
   </table>

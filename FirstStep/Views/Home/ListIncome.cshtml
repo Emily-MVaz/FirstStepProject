@@ -1,7 +1,13 @@
+@await Html.PartialAsync("_Navbar")
+
+<head>
+  <link rel="stylesheet" href="~/css/layout/nav.css">
+</head>
+
 @model List<Income>
   <h1>Income</h1>
 
-  <table class="table table-bordered">
+  <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
         <th scope="col">Name</th>
@@ -14,19 +20,16 @@
     <tbody>
       @foreach (var income in Model) {
       <tr>
-        <th scope="row">@income.IncomeName</th>
+        <th scope="row">
+          <a href="~/incomes/@income.IncomeId">
+            @income.IncomeName
+          </a>
+        </th>
         <td>@income.Category</td>
         <td>@income.Description</td>
         <td>@income.Amount</td>
         <td>@income.date_time</td>
       </tr>
       }
-      <tr>
-        <th scope="row">Name</th>
-        <td>Category</td>
-        <td>Description</td>
-        <td>Amount</td>
-        <td>Date</td>
-      </tr>
     </tbody>
   </table>

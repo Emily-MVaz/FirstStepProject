@@ -103,5 +103,6 @@ public class IncomeController : Controller
 
     return RedirectToAction("Main", "User");
   }
+
 }
 

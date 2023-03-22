@@ -1,69 +1,69 @@
-<div class="text-center">
-  <h1>Edit Expenses</h1>
-</div>
+<head>
+  <link rel="stylesheet" href="~/css/layout/edit.css">
+</head>
 
-@model Expense
+@await Html.PartialAsync("_Navbar")
 
-<div class="text-center">
-  <h1>Edit @Model.ExpenseName</h1>
-</div>
+<div class="edit">
 
-<form asp-action="Update" asp-controller="Expense" asp-route-expenseId="@Model.ExpenseId" method="post">
-  <div class="expenses-container">
-    <div>
-      <!--*--------NAME---------->
+  @model Expense
+
+  <div class="text-center">
+    <!--*--------NAME---------->
+    <h1>
       <section class="name">
-        <label asp-for="ExpenseName">Name:</label>
         <input asp-for="ExpenseName" type="text" value="@Model.ExpenseName" />
         <span asp-validation-for="ExpenseName"></span>
       </section>
+    </h1>
+  </div>
 
-      <!--*--------AMOUNT---------->
-      <section class="amount">
-        <label asp-for="Amount">Amount</label>
-        <input asp-for="Amount" type="text" value="@Model.Amount" />
-        <span asp-validation-for="Amount"></span>
-      </section>
-
-      <!--*--------CATEGORY---------->
-      <div>
+  <form asp-action="Update" asp-controller="Expense" asp-route-expenseId="@Model.ExpenseId" method="post">
+    <div class="expense-container">
+      <div class="nam-cat">
+        <!--*--------CATEGORY---------->
         <section class="category">
-          <label asp-for="Category">Category</label>
+          <label asp-for="Category">Category:</label>
           <select asp-for="Category" value="@Model.Category">
             <option value="">Choose</option>
-            <option value="Housing">Housing</option>
-            <option value="Transportation">Transportation</option>
-            <option value="Food">Food</option>
-            <option value="Utilities">Utilities</option>
-            <option value="Insurance">Insurance</option>
-            <option value="Health">Health</option>
-            <option value="Personal">Personal</option>
-            <option value="Savings">Savings</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Additional">Additional Expenses</option>
+            <option value="Work">Work</option>
+            <option value="Business">Business</option>
+            <option value="Tips">Tips</option>
+            <option value="Bonus">Bonus</option>
+            <option value="Other">Other</option>
           </select>
           <span asp-validation-for="Category"></span>
         </section>
+        <!--*--------AMOUNT---------->
+        <section class="amount">
+          <label asp-for="Amount">Amount:</label>
+          <input asp-for="Amount" type="text" value="@Model.Amount" />
+          <span asp-validation-for="Amount"></span>
+        </section>
+
+
+        <!--*----------DATE------------>
+        <section class="date">
+          <label asp-for="date_time">Date:</label>
+          <input asp-for="date_time" type="date" value="@Model.date_time" />
+          <span asp-validation-for="date_time"></span>
+        </section>
       </div>
-    </div>
 
-    <!--*----------DATE------------>
-    <section class="date">
-      <label asp-for="date_time">Date</label>
-      <input asp-for="date_time" type="date" value="@Model.date_time" />
-      <span asp-validation-for="date_time"></span>
-    </section>
-
-    <!--*----------DESCRIPTION------------>
-    <div>
-      <section class="text-box">
-        <label asp-for="Description"></label>
-        <textarea asp-for="Description" cols="55" rows="7" value="@Model.Description"></textarea>
-        <span asp-validation-for="Description"></span>
-      </section>
+      <!--*----------DESCRIPTION------------>
+      <div class="desc">
+        <section class="text-box">
+          <label asp-for="Description">Description:</label>
+          <textarea asp-for="Description" cols="35" rows="7" value="@Model.Description"></textarea>
+          <span asp-validation-for="Description"></span>
+        </section>
+      </div>
 
       <!--* BUTTONS -->
-      <button>Submit</button>
+      <div class="buttons">
+        <button>Edit</button>
+        <button>Go Back</button>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>

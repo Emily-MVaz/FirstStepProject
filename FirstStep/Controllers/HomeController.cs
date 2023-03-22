@@ -24,7 +24,7 @@ public class HomeController : Controller
     List<Income> allIncomes = _context.Incomes.ToList();
     return View("ListIncome", allIncomes);
   }
-  public IActionResult AllExpenses()
+  public IActionResult ListExpenses()
   {
     List<Expense> allExpenses = _context.Expenses.ToList();
     return View("ListExpenses", allExpenses);

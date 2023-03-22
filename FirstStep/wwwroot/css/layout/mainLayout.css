@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  height: 100%;
+}
+main .sidebar {
+  width: 15%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#2fe09f, #07a5cc);
+}
+main .sidebar .nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+}
+main .sidebar .nav .nav-item {
+  font-size: 1.5em;
+  padding-top: 2em;
+  width: fit-content;
+  text-align: center;
+}
+main .sidebar .nav .nav-item img {
+  width: 25%;
+}
+main .dashboard {
+  width: 85%;
+}
